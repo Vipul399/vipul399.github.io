@@ -1,127 +1,233 @@
 
-<!DOCTYPE html>
-<html>
+    <!DOCTYPE html>
+<html lang="ab" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>
-		Webs - Preview</title>
-
-<link rel="shortcut icon" href="/websfavicon.ico" type="image/x-icon">
-<link rel="icon" href="/websfavicon.ico" type="image/x-icon">
-<link rel="stylesheet" type="text/css" href="//static.websimages.com/vcc9edee/static/projects/finch/css/base.css"/>
-	<link rel="stylesheet" type="text/css" href="//static.websimages.com/vcc9edee/active-static/target/ui/base.css"/>
-<link rel="stylesheet" type="text/css" href="//static.websimages.com/vcc9edee/static/projects/finch/css/ui.css"/>
-
-<content tag="css">
-	<link rel="stylesheet" href="//static.websimages.com/vcc9edee/active-static/target/cobrand/webs/sb3Branding.css" />
-</content>
-
-<style>
-	#preview { width: 100%; }
-	#viewing_label span { line-height: 22px; color: #a1a1a1; font-weight: bold; }
-	#view_label { cursor: default; }
-
-	#btn_close { height: 18px; margin-top: 1px; margin-left: 6px; }
-	#btn_close > span { height: 17px; }
-	#btn_close > span:before { height: 18px; }
-	.view_frame { display: none; }
-	.view_frame.active { display: block; }
-
-	.global-header.disabled { display: none; }
-
-	.header-nav { float: right; margin-top: 2px !important;}
-	#container { padding-top: 59px; }
-	#container.reset { padding-top: 0px; }
-
-	body { overflow-y: hidden; -ms-overflow-y: hidden;}
-</style>
-
+<title>CONTACT</title>
+<meta charset="utf-8" />
 <script>
-	//Used for mixpanel tracking below.
-	if(typeof(window.mpq) === 'undefined') window.mpq = [['init', '58fa82747b4c3f4992b74583e70b8940']];
-	window.force_mpq = true;
-</script>
-
-<script src="//static.websimages.com/active-static/lib/modernizr-old.js"></script>
-<script src="//static.websimages.com/static/global/js/require.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+				var BaseKit_Performance_beaconUrl = "http://55b558c7-beacon.hostgator.co.in/pixel.gif",
+					BaseKit_Performance_sampleMax = "1000",
+					BaseKit_Performance_start = Date.now();
+			</script>
+<meta name="keywords" content=" " />
+<meta name="description" content=" " />
+<meta name="robots" content="index,follow" />
+<meta name="rating" content="general" />
+<base href="http://siskinhealthcare.in/deadlink/" />
+<!--[if IE]>
+<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://widgets.hostgator.co.in/b43b0e5/basekitcore.css.bgz" />
+<link rel="stylesheet" type="text/css" href="http://files.hostgator.co.in/hostgator181692/custom-css/custom41.css" />
+<link rel="stylesheet" type="text/css" href="http://files.hostgator.co.in/hostgator181692/custom-css/theme257195-41.css" />
+<link rel="stylesheet" type="text/css" href="http://widgets.hostgator.co.in/b43b0e5/background_carousel_columns_columns-column_content_form_form-note_form-text_formarea_image_libraryitem_map_menu_search.css" />
+<link rel="icon" href="http://files.hostgator.co.in/favicon.ico" type="image/x-icon" />
+<link rel="SHORTCUT ICON" href="http://files.hostgator.co.in/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="http://siskinhealthcare.in/contact?startcss=true&amp;ts=1439543296" />
+<link rel="canonical" href="http://siskinhealthcare.in/contact">
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+<script type="text/javascript">!window.jQuery && document.write(unescape('%3Cscript src="/libraries/jquery/jquery-1.7.1.js"%3E%3C/script%3E'))</script>
+<script type="text/javascript" src="http://widgets.hostgator.co.in/b43b0e5/jqueryui.js"></script>
 </head>
-<body>
-<header class="global-header group" id="headerCompare">
-	<a class="logo" href="/sites/"><h1>Webs</h1></a>
-
-	<ul class="header-nav">
-		<li>
-			<label id="viewing_label" class="w-btn2-text disabled">
-				<span>You are currently viewing:</span>
-			</label>
-		</li>
-		<li>
-			<label id="view_label" class="w-btn2 w-btn2 active"><span>Preview Version</span></label>
-				</li>
-		<li>
-			<a id="btn_close" class="w-btn2 w-btn2-icon w-btn2-red w-btn-icon w-icon-xsmall"><span>Close</span></a>
-		</li>
-	</ul>
-</header>
-
-<div id="container" class="loading" style="height:800px;">
-	<iframe id="preview" class="view_frame active" src="/s/sitebuilder/pages/343834770/preview"></iframe>
-	</div>
-
-<script>
-(function($) {
-	var $window = $(window);
-	var $container = $("#container")
-	var $previewFrame = $("#preview");
-	var $publishedFrame = $("#published");
-	var $header = $("#headerCompare");
-	var remainingHeight = $header.height();
-	var fixHeight = function() {
-		var height = $window.height() - remainingHeight;
-		$previewFrame.height(height);
-		$publishedFrame.height(height);
-		$container.height(height);
-	};
-	
-	$window.resize(fixHeight);
-	fixHeight();
-
-	// Preview/Published toggles
-	var $previewButton = $("#view_preview").click(function() {
-		$previewButton.addClass("active disabled"); $publishedButton.removeClass("active disabled");
-		$previewFrame.addClass("active"); $publishedFrame.removeClass("active");
-	});
-	var $publishedButton = $("#view_published").click(function() { 
-		$publishedButton.addClass("active disabled"); $previewButton.removeClass("active disabled");
-		$publishedFrame.addClass("active"); $previewFrame.removeClass("active");
-	});
-
-	$("#btn_close").click(function() {
-		window.close();
-		// Or do this instead to hide the header
-		//remainingHeight = 0;
-		//$header.addClass("disabled");
-		//$("#container").addClass("reset");
-		//fixHeight();
-	});
-
-	// Removes the extra padding accounted for in edit mode
-	$previewFrame.load(function(){
-		$previewFrame.contents().find("html")
-			.css("padding-bottom",0)
-			.find("body").delegate("#webs-nav a", "click", function() { 
-				parent.location = this.href; 
-			});
-	});
-
-	$publishedFrame.load(function() {
-		$publishedFrame.contents().find("body").delegate("#webs-nav a", "click", function() { 
-			parent.location = this.href; 
-		});
-	});
-})(jQuery);
-</script>
-
+<body id="bk1" class="normal theme template-content page-contact">
+<!-- AB: the following banner will show if the bannerHTML field is completed against the subscription package of the account holder of the current site -->
+<script type="text/javascript"  src="http://widgets.hostgator.co.in/b43b0e5/basekitcore.js"></script>
+<script type="text/javascript" src="http://widgets.hostgator.co.in/b43b0e5/background_carousel_columns_columns-column_content_form_form-note_form-text_formarea_image_libraryitem_map_menu_search.js"></script>
+<section id="bk4" class="control-row theme-row-header row-header">
+<div class="control-row-content">
+<div id="bk5" class="bk-widget widget-columns widget-columns-38I653">
+<div id="bk6" class="control-zone widget-columns-column widget-columns-column-WDHG3W">
+<div class="widget-columns-column-padding bk-first bk-last">
+<div id="bk7" class="bk-widget widget-background widget-background-626H47">
+<div id="bk7BKcontent" class="bk-widget-content widget-background-content">
+<div id="bk8" class="control-zone control-zone control-zone-X4T79Z">
+<ul id="bk9" class="bk-widget widget-menu left widget-menu-45JM84">
+<li class="widget-menu-item  bk-horizontal  widget-menu-item-firstpos">
+<a id="bk9BK1" class="widget-menu-alink widget-menu-link " title="http://siskinhealthcare.in/home" href="http://siskinhealthcare.in/home">HOME</a>
+</li>
+<li class="widget-menu-item  bk-horizontal  ">
+<a id="bk9BK2" class="widget-menu-alink widget-menu-link " title="http://siskinhealthcare.in/about-us" href="http://siskinhealthcare.in/about-us">ABOUT US</a>
+</li>
+<li class="widget-menu-item  bk-horizontal  ">
+<a id="bk9BK3" class="widget-menu-alink widget-menu-link " title="http://siskinhealthcare.in/products" href="http://siskinhealthcare.in/products">PRODUCT'S</a>
+</li>
+<li class="widget-menu-item  bk-horizontal  widget-menu-item-lastpos">
+<a id="bk9BK4" class="widget-menu-alink widget-menu-link  widget-menu-selected " title="http://siskinhealthcare.in/contact" href="http://siskinhealthcare.in/contact">CONTACT</a>
+</li>
+</ul>
+<div id="bk10" class="bk-widget widget-libraryitem widget-libraryitem-C0PU8X">
+<div id="bk11" class="control-zone control-libraryitem control-libraryitem-M1M41X">
+<div id="bk12" class="bk-widget widget-columns widget-columns-6L24CE">
+<div id="bk13" class="control-zone widget-columns-column widget-columns-column-C902CD">
+<div class="widget-columns-column-padding bk-first">
+</div>
+</div>
+<div id="bk14" class="control-zone widget-columns-column widget-columns-column-7O4JH0">
+<div class="widget-columns-column-padding bk-last">
+<div id="bk15" class="bk-widget widget-search widget-search-D07EJX">
+<div class="widget-search-row widget-search-searchbar">
+<input type="text"  name="bk16" id="bk16" class="framework-control-input-text default bk-standard-input "  title="" value=""   placeholder="Search..." />
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="bk17" class="control-row theme-row-main row-main">
+<div class="control-row-content">
+<div id="bk18" class="bk-widget widget-columns widget-columns-LAHWY1">
+<div id="bk19" class="control-zone widget-columns-column widget-columns-column-V0O31F">
+<div class="widget-columns-column-padding bk-first bk-last">
+<div id="bk20" class="bk-widget widget-map widget-map-1ZJ7O6">
+<div class="widget-map-map"></div>
+</div>
+<div id="bk21" class="bk-widget widget-columns widget-content-RJXW6">
+<div id="bk22" class="control-zone widget-columns-column widget-columns-column-209355">
+<div class="widget-columns-column-padding bk-first">
+<div id="bk23" class="bk-widget widget-image widget-image-FJCXF5">
+<img class="widget-image-image " src="http://files.hostgator.co.in/hostgator181692/image/bags.png" alt="Image description" title="" />
+</div>
+</div>
+</div>
+<div id="bk24" class="control-zone widget-columns-column widget-columns-column-8R815S">
+<div class="widget-columns-column-padding">
+<div id="bk25" class="bk-widget widget-content widget-content-Z7C2D8">
+<p><span style=
+"font-family: arial, helvetica, sans-serif;"><strong><span style=
+"color: rgb(187, 27, 27);">We are &nbsp;immediately Looking for
+Experience Medical Representative For H.Q. HISSAR . Only 1+ year of
+Exp ,age &lt;30y can apply, Package depending on qualifications,
+experience and current CTC. Pl send the Resumes ASAP
+at</span>&nbsp;</strong></span></p>
+<p><span style=
+"color: #2719c2; font-family: arial, helvetica, sans-serif; font-size: medium;">
+<strong>&nbsp; HR@siskinhealthcare.in</strong></span></p>
+<p><span style=
+"font-family: arial, helvetica, sans-serif;"><strong><span style=
+"color: rgb(39, 25, 194); font-size: 18px;"><strong><span>&nbsp;
+info@siskinhealthcare.in&nbsp;</span></strong><br /></span></strong></span></p>
+</div>
+</div>
+</div>
+<div id="bk26" class="control-zone widget-columns-column widget-columns-column-147587">
+<div class="widget-columns-column-padding bk-last">
+<div id="bk27" class="bk-widget widget-image widget-image-734WX2">
+<img class="widget-image-image " src="http://files.hostgator.co.in/hostgator181692/image/imagescaa65xu0.jpg" alt="Image description" title="" />
+</div>
+</div>
+</div>
+</div>
+<div id="bk28" class="bk-widget widget-columns widget-columns-OZG834">
+<div id="bk29" class="control-zone widget-columns-column widget-columns-column-S3LKJM">
+<div class="widget-columns-column-padding bk-first">
+<div id="bk30" class="bk-widget widget-background widget-background-2E9645">
+<div id="bk30BKcontent" class="bk-widget-content widget-background-content">
+<img class="widget-background-image" src="http://www.hostgator.co.in/files/writeable/uploads/basekit-template-images/hostgator763_title_background.jpg" alt="Background image" title="Background image" />
+<div id="bk31" class="control-zone control-zone control-zone-2121D0">
+<div id="bk32" class="bk-widget widget-content widget-content-K26H1F">
+<h3><span style="color: rgb(255, 255, 255);">Physical
+Location</span><br /></h3>
+</div></div>
+</div>
+</div>
+<div id="bk33" class="bk-widget widget-content widget-content-B237B8">
+<p><strong>Mr.Aadi</strong></p>
+<p>H.O-Kuldeep Bhawan</p>
+<p>Near Chotti Line</p>
+<p>Distt Raipur-492001</p>
+<p>Chhatisgarh</p>
+<p>India</p>
+<p><span style="font-family: helvetica;"><strong>&nbsp;Phone:
+<span style=
+"font-size: 18px;">08295-300-456</span></strong></span></p>
+<p><span style="font-family: helvetica;"><strong><span style=
+"font-size: 18px;">&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;<strong><span>08295-300-566</span></strong></span></strong></span></p>
+<p>&nbsp;</p>
+<p>E-mail: <strong><a href=
+"mailto:info@siskinhealth.in">info</a><a href=
+"mailto:ajaygoyalsiskin@gmail.com">@</a><a>siskinhealthcare.in</a></strong></p>
+<p><strong><a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;HR</a><strong><a href=
+"mailto:ajaygoyalsiskin@gmail.com">@</a><a>siskinhealthcare.in</a></strong></strong></p>
+<p>
+<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>
+</div>
+</div>
+</div>
+<div id="bk34" class="control-zone widget-columns-column widget-columns-column-2VUW11">
+<div class="widget-columns-column-padding bk-last">
+<div id="bk35" class="bk-widget widget-background widget-background-15D441">
+<div id="bk35BKcontent" class="bk-widget-content widget-background-content">
+<img class="widget-background-image" src="http://www.hostgator.co.in/files/writeable/uploads/basekit-template-images/hostgator763_title_background.jpg" alt="Background image" title="Background image" />
+<div id="bk36" class="control-zone control-zone control-zone-EZ0JUH">
+<div id="bk37" class="bk-widget widget-content widget-content-0WL91C">
+<h3><span style="color: rgb(255, 255, 255);">Get in
+Contact</span><br /></h3>
+</div></div>
+</div>
+</div>
+<div id="bk38" class="bk-widget widget-formarea widget-formarea-330216">
+<div id="bk40" class="bk-form widget-form-text">
+<div class="widget-form-required"></div>
+<div class="widget-form-validation widget-form-text-validation-message"><!-- validation message --></div>
+<label for="bk41" class="widget-form-label">
+<span class="widget-form-title">E-Mail</span>
+<span class="widget-form-subtitle"></span>
+</label>
+<div class="widget-form-text-X0XJTU-control">
+<input type="text"  name="bk41" id="bk41" class="framework-control-input-text bk-standard-input "  title="" value=""   placeholder="" />
+</div>
+</div>
+<div id="bk42" class="bk-form widget-form-note">
+<div class="widget-form-required"></div>
+<div class="widget-form-validation widget-form-note-validation-message"><!-- validation message --></div>
+<label for="bk43" class="widget-form-label">
+<span class="widget-form-title">Message</span>
+<span class="widget-form-subtitle"></span>
+</label>
+<div class="widget-form-note-0I91X0-control">
+<textarea name="bk43" id="bk43" class="framework-control-input-textarea bk-standard-input" rows="3" cols="30"></textarea></div>
+</div>
+<div class="bk-form widget-formarea-button-row bk-button-left">
+<input type="button" class="widget-formarea-button widget-formarea-button" value="Send" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="bk44" class="control-row theme-row-footer row-footer">
+<div class="control-row-content">
+<div id="bk45" class="bk-widget widget-columns widget-columns-M1M2Y1">
+<div id="bk46" class="control-zone widget-columns-column widget-columns-column-VSQ64I">
+<div class="widget-columns-column-padding bk-first bk-last">
+<div id="bk47" class="bk-widget widget-libraryitem widget-libraryitem-D60570">
+<div id="bk48" class="control-zone control-libraryitem control-libraryitem-0VG85K">
+<div id="bk49" class="bk-widget widget-content widget-content-KQTY9I">
+<p style="text-align: right;"><span style=
+"color: rgb(117, 33, 8); font-size: 14px; font-family: arial, helvetica, sans-serif;">
+@Siskin-India | Copyright 2012</span><br /></p>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script type="text/javascript"  src="http://siskinhealthcare.in/contact?startjs=true&amp;ts=1439543296"></script>
+<img class="page-tracking-pixel" src="//d3svzs8y5qq92x.cloudfront.net/pixel.gif?b=hostgator&amp;e=live" width="1" height="1" alt="" title="" />
+<script src="/libraries/bk-performance/bk-performance.0.2.min.js"></script>
 </body>
 </html>
